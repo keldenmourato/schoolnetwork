@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>School Network</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Donate" />
+    <meta name="keywords" content="free html5, free template, free bootstrap, html5, css3, mobile first, responsive" />
+    <meta name="author" content="wwmm" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="icon" type="image/png" href="images/img/Imagem WhatsApp 2024-07-17 às 15.56.17_242d5246.jpg">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/superfish.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/form.css">
+	<link rel="stylesheet" href="css/footer.css">
+    <script src="js/modernizr-2.6.2.min.js"></script>
+    <script src="https://kit.fontawesome.com/340cef720c.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    
+</head>
+<body>
+    <div id="fh5co-wrapper">
+        <div id="fh5co-page">
+            <header id="fh5co-header-section">
+                <div class="container">
+                    <div class="nav-header">
+                        <a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle dark"><i></i></a>
+                        <h1 id="fh5co-logo"><a href="index.html"><img src="images/img/Blue Bold Typographic Aqua Water Logo (2).png" alt="logo"></a></h1>
+                        <nav id="fh5co-menu-wrap" role="navigation">
+                            <ul class="sf-menu" id="fh5co-primary-menu">
+                                <li><a href="about.html">About</a></li>
+                                <li><a href="contact.html">Contact</a></li>
+                                <li class="active"><a href="chooseValue.html" id="donate-toggle">Donate</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </header>
+            
+            <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel" data-interval="3000">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img class="d-block w-100" src="images/img/1.jpg" alt="First slide">
+                        <div class="carousel-caption">
+                            <h1><strong>Give a Child a Comfortable Place to Learn</strong></h1>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="images/img/2.jpg" alt="Second slide">
+                        <div class="carousel-caption">
+                            <h1><strong>Support Our Mission</strong></h1>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="images/img/3.jpg" alt="Third slide">
+                        <div class="carousel-caption">
+                            <h1><strong>Make a Difference Today</strong></h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Donation Form -->
+            <div id="donation-form">
+                <span class="close-btn">&times;</span>
+                <h2>Donation Form</h2>
+                <form action="#" method="post">
+                    <div class="chosen-amount">
+                        <span>Selected amount: $<span id="selected-amount">0</span></span>
+                    </div>
+                    <div class="donation-options">
+                        <div class="donation-option-box">
+                            <input type="radio" id="donate-50" name="amount" value="50" data-link="payments/form50.html">
+                            <label for="donate-50">$50</label>
+                        </div>
+                        <div class="donation-option-box">
+                            <input type="radio" id="donate-100" name="amount" value="100" data-link="payments/form100.html">
+                            <label for="donate-100">$100</label>
+                        </div>
+                        <div class="donation-option-box">
+                            <input type="radio" id="donate-200" name="amount" value="200" data-link="payments/form200.html">
+                            <label for="donate-200">$200</label>
+                        </div>
+                        <div class="donation-option-box">
+                            <input type="radio" id="donate-other" name="amount" value="other" data-link="payments/formOther.html">
+                            <label for="donate-other">Other</label>
+                        </div>
+                        <div class="donation-option-box" id="other-amount-container" style="display: none; color: #000;align-items: center;">
+                            <input type="number" id="donate-amount" name="other_amount" placeholder="Enter amount" min="1">
+                        </div>
+                    </div>
+                    <input type="submit" value="Donate" class="btn btn-primary center-btn" id="donate-btn">
+                </form>
+            </div>
+            
+            <script>
+                document.addEventListener('scroll', function() {
+                    var header = document.getElementById('fh5co-header-section');
+                    if (window.scrollY > 50) {
+                        header.classList.add('scrolled');
+                    } else {
+                        header.classList.remove('scrolled');
+                    }
+                });
+            
+                document.querySelectorAll('input[name="amount"]').forEach(function(radio) {
+                    radio.addEventListener('change', function() {
+                        var selectedAmount = this.value;
+                        if (selectedAmount === 'other') {
+                            document.getElementById('other-amount-container').style.display = 'block';
+                            document.getElementById('donate-amount').addEventListener('input', function() {
+                                document.getElementById('selected-amount').textContent = this.value || 0;
+                            });
+                        } else {
+                            document.getElementById('other-amount-container').style.display = 'none';
+                            document.getElementById('selected-amount').textContent = selectedAmount;
+                        }
+                    });
+                });
+            
+                document.querySelector('.close-btn').addEventListener('click', function() {
+                    document.getElementById('donation-form').style.display = 'none';
+                });
+            
+                document.getElementById('donate-toggle').addEventListener('click', function(event) {
+                    event.preventDefault();
+                    var form = document.getElementById('donation-form');
+                    form.style.display = 'block';
+                });
+                document.getElementById('donate-btn').addEventListener('click', function(event) {
+                    event.preventDefault();
+                    var selectedAmount = document.querySelector('input[name="amount"]:checked').value;
+                    var link = document.querySelector('input[name="amount"][value="' + selectedAmount + '"]').getAttribute('data-link');
+
+                    window.open(link, '_blank');
+                });
+            </script>
+
+<!-- Problems Faced -->
+<div id="fh5co-feature-product" class="fh5co-section-gray">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 text-center heading-section">
+				<h3 id="Problems">School Network Building the Future.</h3>
+				<p style="text-align: justify;"> In Mozambique, many children are forced to receive their education under trees, sitting on the bare ground due to a lack of classrooms. This situation is dire and demands immediate action. At School Network, we are committed to building classrooms for these children, but we can't do it alone, we need your help. By joining our network and contributing to this vital cause, you can help support the future architects of our world. Together, let’s take a step toward a brighter future</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-4">
+				<div class="feature-left">
+					<span class="icon">
+						<i class="icon-profile-male"></i>
+					</span>
+					<div class="feature-copy">
+						<h3>Our Goal</h3>
+						<p style="text-align: justify;">Our overall goal is to ensure that all children in Mozambique have access to a safe and dignified learning environment, providing a quality education that allows for the full development of their academic and personal abilities. We want to build suitable classrooms, equip schools with the necessary resources, and thereby transform education in the country, creating opportunities for a more promising future for all Mozambican children.
+						</p>
+						<p><a href="about.html">Learn More</a></p>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="feature-left">
+					<span class="icon">
+						<i class="icon-happy"></i>
+					</span>
+					<div class="feature-copy">
+						<h3>Where we are</h3>
+						<p style="text-align: justify;">With our own funds and the support of our friends, we start the construction of 3 new classrooms for the primary school in Boboli. This essential project aims to replace outdoor classes while providing a safe and suitable environment for all classes. We are already moving forward with the construction of 7 classrooms, significantly improving children's learning conditions and positively impacting their academic performance.</p>
+						<p><a href="about.html">Learn More</a></p>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="feature-left">
+					<span class="icon">
+						<i class="icon-wallet"></i>
+					</span>
+					<div class="feature-copy">
+						<h3>Donation</h3>
+						<p style="text-align: justify;">The best way to not feel hopeless is to get up and do something. Don't wait for good things to happen to you. If you go out and make some good things happen, you will fill the world with hope, you will fill yourself with hope</p>
+						<p><a href="about.html">Learn More</a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<h1 style="text-align: center;" id="Help">Other Ways To Help</h1>
+</div>
+<!---->
+<section class="articles">
+	<article>
+	  <div class="article-wrapper">
+		<figure>
+		  <img src="images/img/1.jpg" alt="" />
+		</figure>
+		<div class="article-body">
+		  <h2>Donate Chairs For Ours Schools</h2>
+		  <ul style="text-align: justify;">
+				Our students need your help! Donate chairs to support their comfort and help them focus on their learning. <br><br>
+			
+				
+				<details>
+
+					&nbsp;&nbsp; <li>A comfortable chair can help a student focus on their work;</li>
+					&nbsp;&nbsp; <li>A sturdy desk with chair can provide a stable study space;</li>
+					&nbsp;&nbsp; <li>A variety of seating options can support different learning styles and needs.</li>
+				</details>
+				
+			</ul>
+			
+
+		  
+		  <!--<a href="#" class="read-more">
+			Read more <span class="sr-only">about this is some title</span>
+			<svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor">
+			  <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+			</svg>
+		  </a>-->
+		</div>
+	  </div>
+	</article>
+	<article>
+  
+	  <div class="article-wrapper">
+		<figure>
+		  <img src="images/img/3.jpg" alt="" />
+		</figure>
+		<div class="article-body">
+		  <h2>Donate Academic Materials 📚</h2>
+		  <ul style="text-align: justify;">
+			Donate academic materials to our school and help us provide a high-quality education for our students. 
+			
+			<br><br>
+			<details>
+				Your donation will help us provide a well-rounded education for our students, and support their academic growth and development.
+				&nbsp;&nbsp; <li>Books</li>
+				&nbsp;&nbsp; <li>Bags</li>
+				&nbsp;&nbsp; <li>Pens</li>
+			</details>
+				
+			</ul>
+		  
+		  <!--<a href="#" class="read-more">
+			Read more <span class="sr-only">about this is some title</span>
+			<svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor">
+			  <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+			</svg>
+		  </a>-->
+		</div>
+	  </div>
+	</article>
+	<article>
+  
+	  <div class="article-wrapper">
+		<figure>
+		  <img src="images/img/6.jpg" alt="" />
+		</figure>
+		<div class="article-body">
+		  <h2>Donate Construction Materials</h2>
+
+		  <ul style="text-align: justify;">
+			Help us create a safe, comfortable, and engaging learning environment for our students. <br><br>
+			<details>
+				We're in need of construction materials to renovate and improve our classrooms. Your donation will go towards purchasing essential materials such as
+				&nbsp;&nbsp; <li>paint;</li>
+				&nbsp;&nbsp; <li>lumber;</li>
+				&nbsp;&nbsp; <li>flooring, and more.</li>
+			</details>
+			
+		  </ul>
+
+		  <!--<a href="#" class="read-more">
+			Read more <span class="sr-only">about this is some title</span>
+			<svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor">
+			  <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+			</svg>
+		  </a>-->
+		</div>
+	  </div>
+	</article>
+</section>
+
+<div id="fh5co-portfolio">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6 col-md-offset-3 text-center heading-section animate-box">
+				<h3 id="Gallery">Our Gallery</h3>
+				<p style="text-align: justify;">Scroll through our gallery to see the beginning of the attempt to create better conditions for these children, Some images of what we have been able to do and as we receive help we will share the progress, and don't forget to bring your certificate of contribution to the contributing session.</p>
+			</div>
+		</div>
+		<div class="row row-bottom-padded-md">
+			<div class="col-md-12">
+				<ul id="fh5co-portfolio-list">
+					<li class="two-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/img/4.jpg); ">
+						<a href="#" class="color-3">
+							<div class="case-studies-summary">
+								<span>Give Love</span>
+								<h2>Donation is caring</h2>
+							</div>
+						</a>
+					</li>
+					<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/img/6.jpg); ">
+						<a href="#" class="color-4">
+							<div class="case-studies-summary">
+								<span>Give Love</span>
+								<h2>Donation is caring</h2>
+							</div>
+						</a>
+					</li>
+					<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/img/5.jpg); "> 
+						<a href="#" class="color-5">
+							<div class="case-studies-summary">
+								<span>Give Love</span>
+								<h2>Donation is caring</h2>
+							</div>
+						</a>
+					</li>
+					<li class="two-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/img/3.jpg); ">
+						<a href="#" class="color-6">
+							<div class="case-studies-summary">
+								<span>Give Love</span>
+								<h2>Donation is caring</h2>
+							</div>
+						</a>
+					</li>
+				</ul>		
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<!--<footer>
+	<div id="footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6 col-md-offset-3 text-center">
+					<p class="fh5co-social-icons">
+						<a href="" target="_blank"><i class="fab fa-twitter"></i></a>
+						<a href="" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+						<a href="" target="_blank"><i class="fas fa-envelope"></i></a>
+						<a href="" target="_blank"><i class="fas fa-link"></i></a>
+						<a href="" target="_blank"><i class="fab fa-github"></i></a>
+					</p>
+					<p>Copyright 2024. All Rights Reserved. <br><i class="fas fa-code"></i> with <i class="fas fa-heart"></i>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>-->
+<footer class="footer mt-auto py-3" style="background-color: #ff7448;">
+	<div class="container">
+	  <div class="row">
+			<div class="col-12 col-md-4">
+			<a href="#" class="d-block mb-3">
+				<img src="images/SemFundo[1].png" alt="School Network Logo" height="60">
+			</a>
+			<p class="text-light">Edificio Assos, Av. Marginal, Bairro costa do sol. Parcela 809/1 dos suburbios, Maputo city.</p>
+			<a href="tel:+258874640712"><p class="text-light">+258 87 46 40 712</p></a>
+			<a href="mailto:schoolnetwork024@gmail.com"><p class="text-light">schoolnetwork024@gmail.com</p></a>
+			<ul class="list-inline text-light">
+				<li class="list-inline-item"><a href="" class="text-light"><i class="fab fa-facebook-f"></i></a></li>
+				<li class="list-inline-item"><a href="" class="text-light"><i class="fab fa-instagram"></i></a></li>
+				<li class="list-inline-item"><a href="" class="text-light"><i class="fab fa-twitter"></i></a></li>
+				<li class="list-inline-item"><a href="" class="text-light"><i class="fab fa-linkedin-in"></i></a></li>
+				<li class="list-inline-item"><a href="" class="text-light"><i class="fab fa-youtube"></i></a></li>
+			</ul>
+			</div>
+			<div class="col-12 col-md-4">
+			<h5 class="text-light mb-3">Newsletter</h5>
+			<form>
+				<div class="form-group">
+				  <input type="text" class="form-control" placeholder="Name" required>
+				</div>
+				<div class="form-group">
+				  <input type="email" class="form-control" placeholder="Email" required>
+				</div>
+				<div class="text-center">
+				  <button type="submit" class="btn btn-primary">Subscribe</button>
+				</div>
+			  </form>
+			</div>
+			<div class="col-12 col-md-4">
+			<div class="row">
+				<div class="col-6">
+				<h5 class="text-light mb-3">Quick Links</h5>
+				<ul class="list-unstyled text-light">
+					<li><a href="about.html" class="text-light">About Us</a></li>
+					<li><a href="contact.html" class="text-light">Contact</a></li>
+					<li><a href="#Gallery" class="text-light">Our Gallery</a></li>
+					<li><a href="#Help" class="text-light">Other Ways To Help</a></li>
+					<li><a href="#Problems" class="text-light">Problems Faced</a></li>
+					<li><a href="chooseValue.html" class="text-light">Donate</a></li>
+					<li><a href="#top" class="text-light">Back to Top</a></li>
+				</ul>
+				</div>
+				<div class="col-6">
+					<style>
+						.iiframe {width: 250px; height: 290px;}
+						@media only screen And (max-width:768px){
+							.iiframe {width: 150px; height: 150px;margin-top: 15px;}
+						}
+					</style>
+				<iframe src="https://www.google.com/maps?q=-25.918582581854537, 32.64433093517473&z15&output=embed" class="iiframe" frameborder="0" style="border:0;" allowfullscreen="true" aria-hidden="false" tabindex="0"></iframe>
+				</div>
+		    </div>
+		</div>
+	  </div>
+	  <hr>
+	<div class="container-fluid text-center text-light py-2 ">
+	  <p class="mb-0" style="color: white;">Copyright © 2024 School Network. All rights reserved.</p>
+	</div>
+  </footer>
+</div>
+</div>
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.easing.1.3.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.waypoints.min.js"></script>
+<script src="js/sticky.js"></script>
+<script src="js/jquery.stellar.min.js"></script>
+<script src="js/hoverIntent.js"></script>
+<script src="js/superfish.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
+

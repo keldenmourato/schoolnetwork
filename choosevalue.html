@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Donation Form</title>
+    <link rel="icon" type="image/png" href="images/img/Blue Bold Typographic Aqua Water Logo (2).png">
+	<style>
+		/* Estilizar o formulário de doação */
+        body {
+            display: flex;
+            margin-top: 20px;
+        }
+		#donation-form {
+			background-color: #FFFFFF; /* Fundo branco */
+			padding: 20px;
+			border: 1px solid #CCCCCC;
+			border-radius: 10px;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+			width: 500px; /* Largura do formulário para dispositivos maiores */
+			height: 500px; /* Altura do formulário para dispositivos maiores */
+			margin: 40px auto; /* Centralizar o formulário */
+			text-align: center; /* Centralizar o conteúdo do formulário */
+            max-width: 500px;
+            min-width: 500px;
+		}
+
+		/* Media queries para dispositivos menores */
+        @media only screen and (width: 768px) {
+            #donation-form {
+                background-color: #FFFFFF; /* Fundo branco */
+                padding: 20px;
+                border: 1px solid #CCCCCC;
+                border-radius: 10px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                width: 500px; /* Largura do formulário para dispositivos maiores */
+                height: 500px; /* Altura do formulário para dispositivos maiores */
+                margin: 40px auto; /* Centralizar o formulário */
+                text-align: center; /* Centralizar o conteúdo do formulário */
+                max-width: 500px;
+                min-width: 500px;
+            }
+        }
+
+		/* Estilizar os botões */
+		.btn {
+			background-color: #FFA07A; /* Cor laranja */
+			color: #FFFFFF;
+			border: none;
+			padding: 15px 30px; /* Aumentar o tamanho dos botões */
+			font-size: 18px;
+			cursor: pointer;
+			border-radius: 10px;
+            width: 300px;
+		}
+
+		.btn:hover {
+			background-color: #FFC107; /* Cor laranja mais clara */
+		}
+
+		/* Estilizar as opções de doação */
+		.donation-option-box {
+			margin-bottom: 10px;
+		}
+
+		.donation-option-box input[type="radio"] {
+			/* Hide the radio button */
+			position: absolute;
+			opacity: 0;
+			cursor: pointer;
+		}
+
+		.donation-option-box label {
+			/* Style the label as a button */
+			display: inline-block;
+			background-color: #FFA07A; /* Cor laranja */
+			color: #FFFFFF;
+			border: none;
+			padding: 15px 30px; /* Aumentar o tamanho dos botões */
+			font-size: 18px;
+			cursor: pointer;
+			border-radius: 10px;
+            width: 300px;
+		}
+
+		.donation-option-box label:hover {
+			background-color: #FFC107; /* Cor laranja mais clara */
+		}
+
+		.donation-option-box input[type="radio"]:checked + label {
+			/* Style the label when the radio button is checked */
+			background-color: #FFA07A; /* Cor laranja */
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+		}
+
+		/* Estilizar o campo de entrada de valor */
+		#other-amount-container {
+			margin-top: 10px;
+		}
+
+		#other-amount-container input[type="number"] {
+			padding: 10px;
+			font-size: 16px;
+			border: 1px solid #CCCCCC;
+			width: 150px; /* Tornar o campo de entrada responsivo */
+		}
+
+		/* Estilizar o botão de doação */
+		#donate-btn {
+			width: 150px; /* Tornar o botão responsivo */
+			margin-top: 20px;
+			font-size: 18px;
+		}
+	</style>
+</head>
+<body>
+	<div id="donation-form">
+		<h1><a href="index.html"><img src="images/img/Blue Bold Typographic Aqua Water Logo (2).png" alt="logo" width="100px" height="50px"></a></h1><br>
+		<form action="#" method="post">
+			<div class="chosen-amount">
+				<span>Selected amount: $<span id="selected-amount">0</span></span><br>
+			</div>
+			<div class="donation-options">
+				<div class="donation-option-box">
+					<input type="radio" id="donate-50"name="amount" value="50" data-link="payments/form50.html">
+					<label for="donate-50" class="btn">$50</label>
+				</div>
+				<div class="donation-option-box">
+					<input type="radio" id="donate-100" name="amount" value="100" data-link="payments/form100.html">
+					<label for="donate-100" class="btn">$100</label>
+				</div>
+				<div class="donation-option-box">
+					<input type="radio" id="donate-200" name="amount" value="200" data-link="payments/form200.html">
+					<label for="donate-200" class="btn">$200</label>
+				</div>
+				<div class="donation-option-box">
+					<input type="radio" id="donate-other" name="amount" value="other" data-link="payments/formOther.html">
+					<label for="donate-other" class="btn">Other</label>
+				</div>
+				<div id="other-amount-container" style="display: none; color: #000;align-items: center;">
+					<input type="number" id="donate-amount" name="other_amount" placeholder="Enter amount" min="1">
+				</div>
+			</div>
+			<input type="submit" value="Donate" class="btn btn-primary center-btn" id="donate-btn">
+		</form>
+	</div>
+
+	<script>
+		document.querySelectorAll('input[name="amount"]').forEach(function(radio) {
+			radio.addEventListener('change', function() {
+				var selectedAmount = this.value;
+				if (selectedAmount === 'other') {
+					document.getElementById('other-amount-container').style.display = 'block';
+					document.getElementById('donate-amount').addEventListener('input', function() {
+						document.getElementById('selected-amount').textContent = this.value || 0;
+					});
+				} else {
+					document.getElementById('other-amount-container').style.display = 'none';
+					document.getElementById('selected-amount').textContent = selectedAmount;
+				}
+			});
+		});
+
+            document.getElementById('donate-btn').addEventListener('click', function(event) {
+            event.preventDefault();
+            var selectedAmount = document.querySelector('input[name="amount"]:checked').value;
+            var link;
+
+            if (selectedAmount === 'other') {
+                selectedAmount = document.getElementById('donate-amount').value;
+                link = document.querySelector('input[name="amount"][value="other"]').getAttribute('data-link');
+            } else {
+                link = document.querySelector('input[name="amount"][value="' + selectedAmount + '"]').getAttribute('data-link');
+            }
+
+            window.open(link, '_blank');
+            });;
+	</script>
+</body>
+</html>   

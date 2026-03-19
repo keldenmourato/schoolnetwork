@@ -1,0 +1,83 @@
+/* Colors */
+.bg-orange {
+    background-color: #FFA07A; /* orange background color */
+  }
+  
+  .text-white {
+    color: #FFFFFF; /* white text color */
+  }
+  
+  .fab {
+    font-size: 24px; /* adjust icon size */
+    color: #FFFFFF; /* white icon color */
+  }
+  
+  .fab:hover {
+    color: #FFC107; /* orange hover color */
+  }
+  
+  /* Spacing */
+  .p-6 {
+    padding: 1.5rem; /* padding for the footer */
+  }
+  
+  /* Flexbox */
+  .d-flex {
+    display: flex;
+  }
+  
+  .flex-column {
+    flex-direction: column;
+  }
+  
+  .justify-content-center {
+    justify-content: center;
+  }
+  
+  /* Widths */
+  .w-100 {
+    width: 100%;
+  }
+  
+  .col-md-3 {
+    width: 25%;
+  }
+  
+  .col-md-2 {
+    width: 16.66%;
+  }
+  
+  /* Media Queries */
+  @media (max-width: 767.98px) {
+   .col-md-3,
+   .col-md-2 {
+      width: 100%;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    footer > div {
+      flex-wrap: wrap;
+    }
+  
+    footer > div > div {
+      width: 100%;
+      margin-bottom: 2rem;
+    }
+  
+    footer > div > div:nth-child(2),
+    footer > div > div:nth-child(3) {
+      width: 50%;
+    }
+  
+    footer > div > div:nth-child(4) {
+      width: 100%;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    footer > div > div:nth-child(2),
+    footer > div > div:nth-child(3) {
+      width: 33.33%;
+    }
+  }

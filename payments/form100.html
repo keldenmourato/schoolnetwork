@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>School Network | Donations</title>
+  <link rel="icon" type="image/png" href="images/img/Blue Bold Typographic Aqua Water Logo (2).png">
+  <style>
+    /* Adicione estilos adicionais aqui, se necessário */
+    body {
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        margin-top: 5%;
+    }
+    
+  </style>
+   <script src="https://www.paypal.com/sdk/js?client-id=BAAl0CNvvfUI3rAgw74hMpxYBnMYwyNbuvx1xF1soKwjkovTN2hhqLxg3hyxqQT3zVxOfMHZEX95og85m0&components=hosted-buttons&disable-funding=venmo&currency=USD"></script>
+   <script>
+       paypal.HostedButtons({
+       hostedButtonId: "3JXJ9AJKYFDDS",
+       style: {
+           layout: "vertical",
+           color: "orange",
+           shape: "rect",
+           label: "paypal",
+           size: "responsive",
+           tagline: false,
+           fundingicons: false,
+           branding: {
+           logo: {
+               url: "https://schoolnetwork1.netlify.app/images/img/Blue%20Bold%20Typographic%20Aqua%20Water%20Logo%20(2).png", // URL do ícone da organização
+               alt: "Your Organization Logo"
+           }
+           },
+           buttons: {
+           primary: {
+               color: "#FFA07A", // Cor laranja para os botões
+               background: "#FFFFFF" // Fundo branco
+           }
+           }
+       }
+       }).render("#paypal-container-3JXJ9AJKYFDDS")
+   </script>
+</head>
+<body>
+  
+  <div class="costum">
+        <h1><img src="https://schoolnetwork1.netlify.app/images/img/Blue%20Bold%20Typographic%20Aqua%20Water%20Logo%20(2).png" alt="logo" width="100px" height="50px"></h1>
+
+        <div id="paypal-container-3JXJ9AJKYFDDS"></div>
+       
+  </div>
+  
+</body>
+</html>

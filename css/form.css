@@ -1,0 +1,157 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Carousel */
+.carousel-item img {
+    object-fit: cover;
+    height: 100vh;
+    width: 100%;
+}
+
+/* Header */
+#fh5co-header-section {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    transition: background-color 0.3s;
+    background: rgba(255, 255, 255, 0.1); /* Inicialmente transparente */
+    display: flex;
+    align-items: center; /* Centraliza verticalmente */
+    padding: 0 20px; /* Adiciona padding horizontal */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra leve para o cabeçalho */
+}
+
+#fh5co-header-section.scrolled {
+    background: rgba(255, 255, 255, 1); /* Branco quando rolar */
+}
+#fh5co-header-section a, #fh5co-header-section span {
+    color: #fd5d00; /* Make all links and text white */
+    text-decoration: none;
+    font-weight: bold;
+}
+#fh5co-header-section.scrolled a, #fh5co-header-section.scrolled span {
+    color: #333; /* Change link color to dark gray when scrolled */
+}
+
+#fh5co-header-section .nav-header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}
+
+#fh5co-logo img {
+    width: auto;
+    height: 60px; /* Ajuste a altura do logo */
+}
+
+#fh5co-menu-wrap {
+    margin-left: auto;
+}
+
+/* Ajustar a altura do cabeçalho com base no tamanho do logo */
+#fh5co-header-section {
+    height: 80px; /* Ajuste a altura conforme necessário */
+}
+.carousel-caption {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: rgb(255, 255, 255);
+    width: 100%;
+    
+}
+
+.carousel-caption h1 {
+    font-size: 50px; /* Tamanho do texto */
+    font-weight: bold;
+    line-height: 1.2;
+    color: #fff;
+}
+/* Donation Form */
+#donation-form {
+    position: fixed;
+    top: 100px; /* Distância do topo para não sobrepor o cabeçalho */
+    right: 20px; /* Distância da direita */
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    z-index: 999;
+    width: 300px;
+    border-radius: 8px;
+    display: none; /* Inicialmente oculto */
+    transition: opacity 0.3s ease-in-out;
+}
+
+#donation-form .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 24px;
+    color: #333;
+}
+
+.donation-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.donation-option-box {
+    background-color: #FFA500;
+    color: white;
+    padding: 15px;
+    margin: 5px 0;
+    text-align: center;
+    border-radius: 5px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    flex: 1 1 45%;
+}
+
+.donation-option-box input[type="radio"] {
+    display: none;
+}
+
+.donation-option-box label {
+    cursor: pointer;
+    margin: 0;
+    display: block;
+}
+
+.donation-option-box:last-of-type {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.donation-option-box:last-of-type input[type="number"] {
+    border: none;
+    padding: 10px;
+    border-radius: 9px;
+    width: 80%;
+}
+
+.chosen-amount {
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+.center-btn {
+    display: block;
+    margin: 20px auto;
+}

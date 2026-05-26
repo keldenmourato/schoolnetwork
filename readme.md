@@ -9,11 +9,6 @@ Charities heavily rely on the generosity of the public to help raise funds by do
 
 As we move further into this digital age, the need for charities to grow their online presence in order to survive is becoming more and more apparent. Having a website is one of the fundamental ways in which a charity can grow their presence
 
-
-
-<script src="https://www.paypal.com/sdk/js?client-id=BAAl0CNvvfUI3rAgw74hMpxYBnMYwyNbuvx1xF1soKwjkovTN2hhqLxg3hyxqQT3zVxOfMHZEX95og85m0&components=hosted-buttons&disable-funding=venmo&currency=USD"></script>
-<div id="paypal-container-Q6NM7XFQSA2GG"></div>
-<script>
   paypal.HostedButtons({
     hostedButtonId: "Q6NM7XFQSA2GG",
   }).render("#paypal-container-Q6NM7XFQSA2GG")

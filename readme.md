@@ -8,8 +8,3 @@
 Charities heavily rely on the generosity of the public to help raise funds by donating money, goods and time. It’s no secret that without these donations the vast majority of charities wouldn’t exist, which is why having a website is crucial for raising awareness, encouraging donations and maintaining relationships with supporters to keep the all-important funds flowing.
 
 As we move further into this digital age, the need for charities to grow their online presence in order to survive is becoming more and more apparent. Having a website is one of the fundamental ways in which a charity can grow their presence
-
-  paypal.HostedButtons({
-    hostedButtonId: "Q6NM7XFQSA2GG",
-  }).render("#paypal-container-Q6NM7XFQSA2GG")
-</script>
